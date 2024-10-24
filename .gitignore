@@ -25,3 +25,11 @@ pytest_session.txt
 
 # Jupyter
 **/.ipynb_checkpoints
+
+.pre-commit-config.yaml
+.clang-format
+.flake8
+.isort.cfg
+.mypy.ini
+.ruff.toml
+towncrier.toml
