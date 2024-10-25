@@ -19,3 +19,9 @@ pytest_session.txt
 .cache/
 .pytest_cache
 .coverage
+
+# Output files
+**/output_blocks
+
+# Jupyter
+**/.ipynb_checkpoints
