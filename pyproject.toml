@@ -11,7 +11,8 @@ urls = { documentation = "https://jira.lsstcorp.org/secure/Dashboard.jspa", repo
 dynamic = [ "version" ]
 
 [project.scripts]
-make_block_208 = "lsst.ts.block.utils.block_t208:make_block_t208"
+make_block_t208 = "lsst.ts.block.utils.block_t208:make_block_t208"
+make_block_324 = "lsst.ts.block.utils.block_324:make_block_324"
 
 [tool.setuptools.dynamic]
 version = { attr = "setuptools_scm.get_version" }
