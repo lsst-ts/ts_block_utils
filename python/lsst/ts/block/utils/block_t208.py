@@ -1,3 +1,4 @@
+# type: ignore
 # This file is part of ts_block_utils.
 #
 # Developed for the LSST Data Management System.
