@@ -1,3 +1,4 @@
+# type: ignore
 # This file is part of ts_block_utils.
 #
 # Developed for the LSST Data Management System.
@@ -27,4 +28,4 @@ except ImportError:
     __version__ = "?"
     __repo_version__ = "?"
     __fingerprint__ = "? *"
-    __dependency_versions__ = {}
+    __dependency_versions__ = {}  # type: ignore

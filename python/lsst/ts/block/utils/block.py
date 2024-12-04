@@ -3,14 +3,16 @@ from typing import Any, Dict
 __all__ = ["build_configuration_schema"]
 
 
-def build_configuration_schema(block_number, properties):
+def build_configuration_schema(
+    block_number: int, properties: Dict[str, Dict[str, Any]]
+) -> str:
     """
     Builds a configuration schema string for a given BLOCK and configurable
     properties.
 
     Parameters
     ----------
-    block_number :
+    block_number : int
         The BLOCK number to include in the title and description.
     properties : dict
         A dictionary where each key is a property name, and each value is a
@@ -18,6 +20,7 @@ def build_configuration_schema(block_number, properties):
 
     Returns
     -------
+    str
         A formatted configuration schema string.
     """
 
