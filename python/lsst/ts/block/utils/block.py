@@ -36,12 +36,25 @@ def build_configuration_schema(
     # Add each property to the schema
     for prop_name, prop_details in properties.items():
         configuration_schema += f"  {prop_name}:\n"
-        configuration_schema += f'    description: {prop_details["description"]}\n'
-        configuration_schema += f'    type: {prop_details["type"]}\n'
+        configuration_schema += (
+            f'    description: {prop_details.get("description", "")}\n'
+        )
+
+        if "type" in prop_details:
+            configuration_schema += f'    type: "{prop_details.get("type")}"\n'
+
+        if "anyOf" in prop_details:
+            configuration_schema += "    anyOf:\n"
+            for obj in prop_details["anyOf"]:
+                configuration_schema += (
+                    "      - "
+                    + ", ".join(f'{key}: "{val}"' for key, val in obj.items())
+                    + "\n"
+                )
+
         if "default" in prop_details:
-            # Add quotes around the default value if it's a string
             default_value = prop_details["default"]
-            if prop_details["type"] == "string":
+            if prop_details.get("type") == "string":
                 default_value = f'"{default_value}"'
             configuration_schema += f"    default: {default_value}\n"
 
