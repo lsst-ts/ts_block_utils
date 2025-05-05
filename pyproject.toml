@@ -7,11 +7,12 @@ name = "ts-block-utils"
 description = "Utilities to build json blocks configurations."
 license = { text = "GPL" }
 classifiers = [ "Programming Language :: Python :: 3" ]
-urls = { documentation = "https://jira.lsstcorp.org/secure/Dashboard.jspa", repository = "https://github.com/lsst-ts/ts_atspec" }
+urls = { documentation = "https://jira.lsstcorp.org/secure/Dashboard.jspa", repository = "https://github.com/lsst-ts/ts_block_utils" }
 dynamic = [ "version" ]
 
 [project.scripts]
-make_block_208 = "lsst.ts.block.utils.block_t208:make_block_t208"
+make_block_t208 = "lsst.ts.block.utils.block_t208:make_block_t208"
+make_block_328 = "lsst.ts.block.utils.block_328:make_block_328"
 
 [tool.setuptools.dynamic]
 version = { attr = "setuptools_scm.get_version" }
