@@ -13,6 +13,7 @@ dynamic = [ "version" ]
 [project.scripts]
 make_block_t208 = "lsst.ts.block.utils.block_t208:make_block_t208"
 make_block_328 = "lsst.ts.block.utils.block_328:make_block_328"
+make_block_387 = "lsst.ts.block.utils.block_387:make_block_387"
 
 [tool.setuptools.dynamic]
 version = { attr = "setuptools_scm.get_version" }
