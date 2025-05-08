@@ -34,3 +34,6 @@ pytest_session.txt
 .ruff.toml
 towncrier.toml
 .env
+*.egg-info/
+.installed.cfg
+*.egg
